@@ -1,0 +1,45 @@
+repos:
+  # ---------- Python ----------
+  - repo: https://github.com/psf/black
+    rev: 24.4.2        # pin exact tag
+    hooks: [id: black]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks: [id: ruff]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.10.0
+    hooks: [id: mypy]
+
+  # ---------- Rust ----------
+  - repo: https://github.com/doublify/pre-commit-rust
+    rev: 'v1.0'
+    hooks:
+      - id: fmt
+        name: cargo fmt (edge-router)
+        entry: bash -c 'cd edge-router && cargo fmt --all -- --check'
+        language: system
+        types: [rust]
+
+      - id: clippy
+        name: cargo clippy (edge-router)
+        entry: bash -c 'cd edge-router && cargo clippy --all-targets --all-features -- -D warnings'
+        language: system
+        types: [rust]
+
+
+  # ---------- Go ----------
+  - repo: https://github.com/tekwizely/pre-commit-golang
+    rev: v1.0.0-rc.1
+    hooks:
+      - id: go-fmt
+      - id: go-vet
+      - id: go-test-mod
+      - id: go-mod-tidy
+
+  # ---------- Markdown / misc ----------
+  - repo: https://github.com/markdownlint/markdownlint
+    rev: v0.12.0
+    hooks: [id: markdownlint]
+
