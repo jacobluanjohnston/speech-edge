@@ -3,8 +3,8 @@
 Low-power speech-to-text edge router with local/cloud cascades,
  Kafka transport, OpenTelemetry metrics, and k3s deploys.
 
-⚙️ Written in **Rust**, **Go**, and **Python**.
-🎯 Personal long-term side project to explore real-time observability,
+- ⚙️ Written in **Rust**, **Go**, and **Python**.
+- 🎯 Personal long-term side project to explore real-time observability,
 power tradeoffs, and production-grade infra.
 
 ---
