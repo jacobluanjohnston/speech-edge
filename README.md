@@ -3,8 +3,8 @@
 Low-power speech-to-text edge router with local/cloud cascades,
  Kafka transport, OpenTelemetry metrics, and k3s deploys.
 
-> ⚙️ Written in **Rust**, **Go**, and **Python**.
-> 🎯 Personal long-term side project to explore real-time observability,
+⚙️ Written in **Rust**, **Go**, and **Python**.
+🎯 Personal long-term side project to explore real-time observability,
 power tradeoffs, and production-grade infra.
 
 ---
@@ -14,16 +14,16 @@ power tradeoffs, and production-grade infra.
 | Tech                    | Why                         |
 | ----------------------- | --------------------------- |
 | Rust (`edge-router`)    | Low-latency GPIO handling   |
-                          |   + async Kafka producer    |
+|                        | async Kafka producer        |
 | Go (`stt-wrapper`)      | Simple cgo bindings to      |
-                          |   `whisper.cpp`             |
+|                         |   `whisper.cpp`             |
 | Python (`power-sensor`) | Fast prototyping for INA219 |
-                          |  power sensor & metrics     |
+|                         |  power sensor & metrics     |
 | Kafka + k3s             | Back-pressure support +     |
-                          |  self-contained cluster     |
-                          |    demos                    |
+|                         |  self-contained cluster     |
+|                         |    demos                    |
 | OpenTelemetry + Grafana | End-to-end traces + p95/p99 |
-                          |  latency tracking           |
+|                         |  latency tracking           |
 
 ---
 
