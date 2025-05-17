@@ -1,0 +1,13 @@
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/cmake/RdKafka/RdKafkaConfig.cmake
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/cmake/RdKafka/RdKafkaConfigVersion.cmake
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/cmake/RdKafka/FindLZ4.cmake
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/cmake/RdKafka/RdKafkaTargets.cmake
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/cmake/RdKafka/RdKafkaTargets-debug.cmake
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/share/licenses/librdkafka/LICENSES.txt
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/pkgconfig/rdkafka-static.pc
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/librdkafka.a
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/include/librdkafka/rdkafka.h
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/include/librdkafka/rdkafka_mock.h
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/pkgconfig/rdkafka++-static.pc
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/lib/librdkafka++.a
+/Users/Jacob/speech-edge/edge-router/target/debug/build/rdkafka-sys-0bcc191f73ab50ed/out/include/librdkafka/rdkafkacpp.h

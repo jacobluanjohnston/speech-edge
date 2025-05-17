@@ -28,15 +28,33 @@ repos:
         language: system
         types: [rust]
 
-
   # ---------- Go ----------
   - repo: https://github.com/tekwizely/pre-commit-golang
     rev: v1.0.0-rc.1
     hooks:
       - id: go-fmt
+        name: go-fmt (stt-wrapper)
+        entry: bash -c 'cd stt-wrapper && go fmt ./...'
+        language: system
+        pass_filenames: false
+
       - id: go-vet
+        name: go-vet (stt-wrapper)
+        entry: bash -c 'cd stt-wrapper && go vet ./...'
+        language: system
+        pass_filenames: false
+
       - id: go-test-mod
+        name: go-test-mod (stt-wrapper)
+        entry: bash -c 'cd stt-wrapper && go test ./...'
+        language: system
+        pass_filenames: false
+
       - id: go-mod-tidy
+        name: go-mod-tidy (stt-wrapper)
+        entry: bash -c 'cd stt-wrapper && go mod tidy'
+        language: system
+        pass_filenames: false
 
   # ---------- Markdown / misc ----------
   - repo: https://github.com/markdownlint/markdownlint
