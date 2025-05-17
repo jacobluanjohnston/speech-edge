@@ -11,19 +11,11 @@ power tradeoffs, and production-grade infra.
 
 ## 🧠 Overview
 
-| Tech                    | Why                         |
-| ----------------------- | --------------------------- |
-| Rust (`edge-router`)    | Low-latency GPIO handling   |
-|                        | async Kafka producer        |
-| Go (`stt-wrapper`)      | Simple cgo bindings to      |
-|                         |   `whisper.cpp`             |
-| Python (`power-sensor`) | Fast prototyping for INA219 |
-|                         |  power sensor & metrics     |
-| Kafka + k3s             | Back-pressure support +     |
-|                         |  self-contained cluster     |
-|                         |    demos                    |
-| OpenTelemetry + Grafana | End-to-end traces + p95/p99 |
-|                         |  latency tracking           |
+Rust (`edge-router`) - low-latency GPIO handling async Kafka producer
+Go (`stt-wrapper`) - simple cgo bindings to `whisper.cpp`
+Python (`power-sensor`) - fast prototyping for INA219 power sensor & metrics
+Kafka + k3s - back-pressure support - self-contained cluster demos
+OpenTelemetry + Grafana - end-to-end traces + p95/p99 latency tracking
 
 ---
 
