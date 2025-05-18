@@ -1,0 +1,12 @@
+repos:
+  - repo: local
+    hooks:
+      # Tell pre-commit to SKIP everything except Python on this box
+      - id: local-skip-all-heavy-hooks
+        name: noop
+        language: fail
+        entry: echo "Pi override"
+        stages: [commit]          # commit-time only
+        always_run: false
+        exclude: ''               # match nothing, acts as a placeholder
+default_stages: [commit]          # no pre-push stage

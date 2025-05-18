@@ -1,6 +1,6 @@
 module speech-edge/stt-wrapper
 
-go 1.24.3
+go 1.19
 
 require github.com/segmentio/kafka-go v0.4.48
 
