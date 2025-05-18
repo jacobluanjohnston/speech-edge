@@ -93,9 +93,3 @@ This installs and runs the following linters:
 - **Go** - `go-fmt`, `go-vet`, `go-test-mod`, `go-mod-tidy`
 
 ---
-
-Notes to self:
-- https://training.confluent.io/
-- https://kafka.apache.org/documentation
-- https://hub.docker.com/r/confluentinc/cp-zookeeper
-- virtualenv, added `source /home/admin/ina219-env/bin/activate` into .bashrc
