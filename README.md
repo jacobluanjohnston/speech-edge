@@ -98,3 +98,4 @@ Notes to self:
 - https://training.confluent.io/
 - https://kafka.apache.org/documentation
 - https://hub.docker.com/r/confluentinc/cp-zookeeper
+- virtualenv, added `source /home/admin/ina219-env/bin/activate` into .bashrc
