@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      zookeeper:
+        image: bitnami/zookeeper:latest
+        ports:
+          - 2181:2181
+      kafka:
+        image: bitnami/kafka:latest
+        ports:
+          - 9092:9092
+        env:
+            KAFKA_BROKER_ID: 1
+            KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+            KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
+            KAFKA_LISTENERS: PLAINTEXT://localhost:9092
+        zookeeper:
+          image: bitnami/zookeeper:latest
+          ports:
+            - 2181:2181
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run pre-commit hooks
+        run: |
+          pip install pre-commit
+          pre-commit run --all-files
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install pytest
+
+      - name: Run Python tests
+        run: pytest sensor/test_ina219_mock.py sensor/test_kafka_message.py
+
+      - name: Run Python tests with coverage
+        run: pytest --cov=power_sensor --cov-report=term-missing
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.19'
+
+      - name: run Go tests
+        run: go test ./stt-wrapper/...
