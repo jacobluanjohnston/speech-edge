@@ -9,19 +9,19 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      zookeeper:
-        image: bitnami/zookeeper:latest
-        ports:
-          - 2181:2181
       kafka:
         image: bitnami/kafka:latest
         ports:
           - 9092:9092
         env:
             KAFKA_BROKER_ID: 1
-            KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+            KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
             KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
-            KAFKA_LISTENERS: PLAINTEXT://localhost:9092
+            KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      zookeeper:
+        image: bitnami/zookeeper:latest
+        ports:
+          - 2181:2181
 
     steps:
       - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install Python dependencies
-        run: pip install pytest
+        run: pip install pytest pytest-cov
 
       - name: Run Python tests
         run: pytest power_sensor/test_ina219_mock.py sensor/test_kafka_cli.py
