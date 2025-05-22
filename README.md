@@ -3,7 +3,9 @@
 Low-power speech-to-text edge router with local/cloud cascades,
  Kafka transport, OpenTelemetry metrics, and k3s deploys.
 
-Written in **Rust**, **Go**, and **Python**.
+![Kafka Mode: ZooKeeper](https://img.shields.io/badge/kafka--mode-zookeeper-blue)
+![CI: GitHub Actions](https://github.com/jacobluanjohnston/speech-edge/actions/workflows/test.yaml/badge.svg)
+![Languages: Rust, Go, Python](https://img.shields.io/badge/languages-rust--go--python-yellowgreen)
 
 Personal long-term side project to explore real-time observability,
 power tradeoffs, and production-grade infra.
@@ -93,3 +95,18 @@ This installs and runs the following linters:
 - **Go** - `go-fmt`, `go-vet`, `go-test-mod`, `go-mod-tidy`
 
 ---
+
+## Other Notes
+
+### Kafka Deployment Notes
+
+This project uses Kafka with ZooKeeper mode for CI and local development to ensure
+ maximum compatibility and reliability across environments.
+
+KRaft (Kafka Raft Mode)
+
+- Kafka is transitioning towards a ZooKeeper-less architecture known as KRaft mode,
+ which offers simplified deployment, faster start-up, and a native quorum-based
+ controller management
+- This project does not currently use KRaft by default. Future branches may include
+ KRaft support.
