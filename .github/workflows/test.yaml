@@ -44,7 +44,7 @@ jobs:
         run: pip install pytest pytest-cov
 
       - name: Run Python tests
-        run: pytest power_sensor/test_ina219_mock.py sensor/test_kafka_cli.py
+        run: pytest power_sensor/test_ina219_mock.py power_sensor/test_kafka_cli.py
 
       - name: Run Python tests with coverage
         run: pytest --cov=power_sensor --cov-report=term-missing

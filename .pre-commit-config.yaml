@@ -24,9 +24,11 @@ repos:
 
       - id: clippy
         name: cargo clippy (edge-router)
-        entry: bash -c 'cd edge-router && cargo clippy --all-targets --all-features -- -D warnings --no-deps'
+        entry: bash -c 'cd edge-router && cargo clippy'
         language: system
         types: [rust]
+        pass_filenames: false
+        args: [--all-targets, --all-features, --, -D, warnings, --no-deps]
 
   # ---------- Go ----------
   - repo: https://github.com/tekwizely/pre-commit-golang
