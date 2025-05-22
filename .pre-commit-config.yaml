@@ -48,7 +48,7 @@ repos:
 
       - id: go-test-mod
         name: go-test-mod (stt-wrapper)
-        entry: bash -c 'cd stt-wrapper && go test ./...'
+        entry: bash -c 'cd stt-wrapper && go test -tags=integration ./...'
         language: system
         pass_filenames: false
 
