@@ -1,7 +1,7 @@
 repos:
   # ---------- Python ----------
   - repo: https://github.com/psf/black
-    rev: 24.4.2        # pin exact tag
+    rev: 24.4.2
     hooks: [id: black]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
@@ -24,7 +24,7 @@ repos:
 
       - id: clippy
         name: cargo clippy (edge-router)
-        entry: bash -c 'cd edge-router && cargo clippy --all-targets --all-features -- -D warnings'
+        entry: bash -c 'cd edge-router && cargo clippy --all-targets --all-features -- -D warnings --no-deps'
         language: system
         types: [rust]
 
