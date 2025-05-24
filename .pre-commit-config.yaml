@@ -47,8 +47,8 @@ repos:
         pass_filenames: false
 
       - id: go-test-mod
-        name: go-test-mod (stt-wrapper) (unit only)
-        entry: bash -c 'cd stt-wrapper && go test -tags=unit ./...'
+        name: go-test-mod (stt-wrapper)
+        entry: bash -c 'cd stt-wrapper && go test ./...'
         language: system
         pass_filenames: false
 
